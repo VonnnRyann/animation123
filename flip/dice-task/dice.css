@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+.plus {
+    position: relative;
+    background: red;
+    font-size: 3rem;
+    z-index: 5;
+    width: 15rem;
+    text-align: end;
+    box-shadow: -10px 2px 8px 10px silver,-20px 4px 15px 20px red,-30px 4px 10px 30px gray;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation: fire 1s linear infinite;
+}
+.container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 50vh;
+    width: 50%;
+
+}
+
+.pac {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+.pac::before, .pac::after {
+    position: absolute;
+    top: -50px;
+    display: block;
+    border-radius: 50%;
+    content: "";
+    height: 0px;
+    width: 0px;
+}
+.pac::before {
+    animation: jump .5s ease infinite;
+    border: 50px solid yellow;
+    border-left-color: transparent;
+    border-bottom-color: transparent;   
+}
+.pac::after {
+    animation: down .5s ease infinite;
+    border: 50px solid yellow;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+.being {
+    display: flex;
+    justify-content: space-around;
+    animation: ball .5s linear infinite;
+    width: 100%;
+    margin: 2%;
+}
+.being::before {
+    background-color: white;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    content: "";
+    height: 1rem;
+    width: 2rem;
+    box-shadow: 1px 1px 2px 2px red;
+}
+@keyframes jump {
+    0%,100% {transform: rotate(-45deg);}
+    50% {transform: rotate(-90deg);}
+}
+@keyframes down {
+    0%,100% {transform: rotate(-40deg);}
+    50% {transform: rotate(0deg);}
+}
+
+@keyframes ball {
+    0% {transform: translate(50%);}
+    100%{transform: translate(-50%);}
+}
+@keyframes fire {
+    0% {transform: translate(10%);}
+    100%{transform: translate(-10%);}
+}

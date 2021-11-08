@@ -1,0 +1,122 @@
+body {
+    height: vh;
+    margin: 0;
+    border: 1px solid red;
+    background-color: green;
+}
+div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 1%;
+    /* box-shadow: 2px 2px 2px 2px tomato,2px 2px 4px 4px black; */
+}
+.circle {
+    height: 200px;
+    width: 200px;
+    transition: all 1s;
+    transform:
+    translate(40vmin,40vmin);
+    border-radius: 50%;
+    background-color: tomato;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 30px;
+
+}
+div:nth-of-type(2){
+    background-color: black;
+    transition: all 1s;
+    transform:
+    translate(25vmin,8vmin);
+/*     border-top-left-radius: 100%; */
+
+}
+div:nth-of-type(3){
+    background-color: black;
+    transition: all 2s;
+    transform:
+    translate(63vmin,-2vmin);
+ /*    border-top-right-radius: 100%; */
+
+}
+div:nth-of-type(4){
+    background-color: black;
+    transition: all 4s;
+    transform:
+    translate(25vmin,25.5vmin);
+   /*  border-bottom-left-radius: 100%; */
+
+}
+div:nth-of-type(5){
+    background-color: black;
+    transition: all 3s;
+    transform:
+    translate(63vmin,16vmin);
+    /* border-bottom-right-radius: 100%; */
+    color: red;
+
+}
+div:nth-of-type(6){
+    background-color: black;
+    transition: all 4.5s;
+    transform:
+    translate(25vmin,-17vmin);
+    /* border-radius: 10px; */
+    height: 200px;
+    color: white;
+
+}
+div:nth-of-type(7){
+    background-color: black;
+    transition: all 2.5s;
+    transform:
+    translate(63vmin,-35vmin);
+    /* border-radius: 10px; */
+    height: 200px;
+    color: white;
+
+}
+div:nth-of-type(8){
+    background-color: black;
+    transition: all 1.5s;
+    transform:
+    translate(40vmin,-67vmin);
+    /* border-radius: 10px; */
+    width: 200px;
+    color: white;
+
+}
+div:nth-of-type(9){
+    background-color: black;
+    transition: all 3.5s;
+    transform:
+    translate(40vmin,-39.8vmin);
+    /* border-radius: 10px; */
+    width: 200px;
+    color: white;
+}
+.circle:hover {
+    border-radius: 50%;
+    background-color: yellow;
+    transform:
+    translate(50vmin,0vmin);
+    border: 0;
+    box-shadow: 20px 20px 80px 80px tomato;
+    color: black;
+    transition-timing-function: ease-in-out;
+    transition: all 5s;
+    height: 500px;
+    width: 500px;
+
+
+}
+div:nth-of-type(9):hover {
+    transform: skewY(60deg)
+    ;
+    transition: all 2s;
+    transform: translate(470px,-300px);
+}
